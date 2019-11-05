@@ -14,7 +14,8 @@ public class InsertArray {
         } while (size > 20);
 
         int[] array;
-        array = new int[size];
+        array = new int[size * 2];
+        System.out.println(array.length);
         int i = 0;
         while (i < size) {
             System.out.print("Enter element " + (i + 1) + " : ");
@@ -22,10 +23,13 @@ public class InsertArray {
             i++;
         }
 
+
         System.out.print("Property list: ");
-        for (int j = 0; j < array.length; j++) {
+        for (int j = 0; j < size; j++) {
             System.out.print(array[j] + "\t");
         }
+
+
 
         int newValue;
         int index;
@@ -33,7 +37,7 @@ public class InsertArray {
         newValue = input.nextInt();
         System.out.println("Enter index: ");
         index = input.nextInt();
-        if (index < 0 || index > array.length) {
+        if (index < 0 || index > size) {
             System.out.println("Do not insert in array!");
         } else {
             for (int j = size; j > index; j--) {
@@ -47,5 +51,6 @@ public class InsertArray {
         for (int j = 0; j < size; j++) {
             System.out.print(array[j] + "\t");
         }
+
     }
 }
